@@ -5,9 +5,6 @@
  */
 package Folha_De_Pagamento;
 
-import java.time.LocalDate;
-import java.time.Month;
-import java.time.Year;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -94,14 +91,17 @@ public class Funcionario {
         return salarioLiquido;
     }
     
-    public void mostrarFolhaPagamento(){
-        System.out.println("FOLHA DE PAGAMENTO: " + this.nome);
-        System.out.println("O salário bruto é: " + this.salarioBruto);
-        System.out.println("O desconto de INSS é: " + this.calcularDescontoInss());
-        System.out.println("O desconto de IR é: " + this.calcularImpostoRenda());
-        System.out.println("Os adicionais são: " + this.calcularValoresAdicionais());
-        System.out.println("O valor líquido é: " + this.salarioLiquido);
-        System.out.println("-------------------------------------------");
+    public String mostrarFolhaPagamento(){
+        String resultado;
+        
+        resultado =  "FOLHA DE PAGAMENTO: " + this.nome + "\n" +
+        "O salário bruto é: " + this.salarioBruto + "\n"+
+        "O desconto de INSS é: " + this.calcularDescontoInss() + "\n"+
+        "O desconto de IR é: " + this.calcularImpostoRenda() + "\n"+
+        "Os adicionais são: " + this.calcularValoresAdicionais() + "\n"+
+        "O valor líquido é: " + this.salarioLiquido + "\n"+
+        "-------------------------------------------" + "\n";
+        return resultado;
     }
     
     private float calcularDescontoInss(){

@@ -40,11 +40,11 @@ public class Utilizacao {
            
         cristiano.contratar(Funcionario.tipoContrato.tcEfetivo, 10, 2, dataAdmCristiano);
         cristiano.calcularSalarioLiquido(100); 
-        cristiano.mostrarFolhaPagamento();
+         System.out.println(cristiano.mostrarFolhaPagamento());
         
         muricio.contratar(Funcionario.tipoContrato.tcHorista, 30, 1, dataAdmMuricio);
         muricio.calcularSalarioLiquido(200);    
-        muricio.mostrarFolhaPagamento();
+        System.out.println(muricio.mostrarFolhaPagamento());
     }
     
 }
